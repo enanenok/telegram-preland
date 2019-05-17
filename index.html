@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Telegram</title>
+  <meta name="description" content="" />
+
+  <!-- Авто редирект в канал, ссылка и время в секундах -->
+  <!-- <meta http-equiv="refresh" content="3; URL=tg://resolve?domain=durov_russia" /> -->
+
+  <link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  
+  <header class="header">
+    <img src="img/telegram-logo.png" alt="Telegram">
+  </header>
+
+  <section class="content-channel">
+    <!-- Аватарка канала в папке "img" -->
+    <img class="avatar-channel" src="img/avatar-channel.jpg" alt="">
+    <!-- Заголовок канала -->
+    <h1 class="title-channel">Канал Павла Дурова</h1>
+    <!-- Описание канала -->
+    <div class="lead-channel">
+      <p>Здесь я публикую мысли о Telegram чуть менее формально и более прямо, чем в официальном блоге Telegram.</p>
+      <p>Подпишитесь, только если вы фанат Telegram.</p>
+    </div>
+
+    <div class="button-wrapper">
+      <!-- Синяя кнопка, ссылка на канала -->
+      <a class="btn" href="tg://resolve?domain=durov_russia" onclick="return true;">Открыть в Telegram</a>
+      <!-- Серая кнопка, для скачки приложения -->
+      <a class="btn btn-2" id="dlink" href="https://telegram.org/" target="_blank" onclick="return true;">У меня нет Telegram</a>
+    </div>
+  </section>
+  
+  
+  <script src="js/script.js"></script>
+
+  <!-- Скрипт для скачки аппа из маркетплейса при клике на вторую кнопку -->
+  <script type="text/javascript">
+    var user = detect.parse(navigator.userAgent);
+    dlink = "https://telegram.org/";
+    if (user.os.family == "iOS") {dlink = 'https://itunes.apple.com/ru/app/telegram-messenger/id686449807?mt=8'}             
+    if (user.os.family == "Android") {dlink = 'market://details?id=org.telegram.messenger'}
+    document.getElementById("dlink").setAttribute("href", dlink);
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
