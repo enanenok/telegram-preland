@@ -337,11 +337,6 @@ button {
   text-decoration: none;
 }
 
-.btn-2 {
-  background-color: #6c6c6c;
-  border-color: #6c6c6c;
-}
-
 
 /*==========  Mobile First Method  ==========*/
 @media only screen and (min-width : 375px) {

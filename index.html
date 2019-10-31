@@ -38,23 +38,9 @@
     <div class="button-wrapper">
       <!-- Синяя кнопка, ссылка на канала -->
       <a class="btn" href="tg://resolve?domain=durov_russia" onclick="return true;">Открыть в Telegram</a>
-      <!-- Серая кнопка, для скачки приложения -->
-      <a class="btn btn-2" id="dlink" href="https://telegram.org/" target="_blank" onclick="return true;">У меня нет Telegram</a>
     </div>
   </section>
   
-  
-  <script src="js/script.js"></script>
-
-  <!-- Скрипт для скачки аппа из маркетплейса при клике на вторую кнопку -->
-  <script type="text/javascript">
-    var user = detect.parse(navigator.userAgent);
-    dlink = "https://telegram.org/";
-    if (user.os.family == "iOS") {dlink = 'https://itunes.apple.com/ru/app/telegram-messenger/id686449807?mt=8'}             
-    if (user.os.family == "Android") {dlink = 'market://details?id=org.telegram.messenger'}
-    document.getElementById("dlink").setAttribute("href", dlink);
-  </script>
-
   <!-- Yandex.Metrika counter -->
   <!-- /Yandex.Metrika counter -->
 
